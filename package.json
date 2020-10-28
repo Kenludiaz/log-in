@@ -34,5 +34,21 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "This is a react log in component.",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kenludiaz/log-in.git"
+  },
+  "keywords": [
+    "React"
+  ],
+  "author": "Kenludiaz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kenludiaz/log-in/issues"
+  },
+  "homepage": "https://github.com/Kenludiaz/log-in#readme"
 }
