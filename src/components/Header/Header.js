@@ -5,7 +5,7 @@ function Header(props) {
 
     return (
         <header className="header">
-            <LogInOutBtn/>
+            <LogInOutBtn isLoggedIn={props.isLoggedIn} onLoginChange={ () => props.onLoginChange() }/>
         </header>
     )
 }

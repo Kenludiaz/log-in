@@ -1,8 +1,9 @@
 import React from 'react';
 
-function ContinueAsGuestBtn() {
+function ContinueAsGuestBtn(props) {
     return(
-        <button className="loginform_btn">
+        <button className="loginform_btn"
+        onClick={() => props.onLoginChange()}>
             Continue as Guest
         </button>
     )
