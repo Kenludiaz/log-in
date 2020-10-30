@@ -1,6 +1,6 @@
 {
   "name": "login",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.5",
@@ -38,17 +38,10 @@
   "description": "This is a react log in component.",
   "main": "index.js",
   "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Kenludiaz/log-in.git"
-  },
   "keywords": [
     "React"
   ],
   "author": "Kenludiaz",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Kenludiaz/log-in/issues"
-  },
-  "homepage": "https://github.com/Kenludiaz/log-in#readme"
+  "license": "ISC"
+
 }
