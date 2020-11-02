@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import LoginForm from './components/LoginForm/LoginForm';
 import Header from './components/Header/Header';
+import UserContext from './components/Contexts/UserContext';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
@@ -11,8 +12,10 @@ function App() {
 
   return (
     <div className="App">
-      <Header isLoggedIn={isLoggedIn} onLoginChange={ () => handleLoginChange()}/>
-      <LoginForm isLoggedIn={isLoggedIn} onLoginChange={ () => handleLoginChange()}/>
+      <UserContext.Provider value={{isLoggedIn, handleLoginChange}}>
+        <Header />
+        <LoginForm isLoggedIn={isLoggedIn} onLoginChange={ () => handleLoginChange()}/>  
+      </UserContext.Provider>
     </div>
   );
 }

@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import UserContext from '../Contexts/UserContext';
 
 function LogInOutBtn(props) {
+    const {value, setValue} = useContext(UserContext);
     return (
         <button className="header__btn"
         onClick={ () => {
-            if (props.isLoggedIn) {
-                props.onLoginChange()
+            if ({value}) {
+                {setValue()}
             }
         }}> 
-            Log {props.isLoggedIn? "out": 'in'}    
+            Log {value? "out": 'in'}    
         </button>
     )
 }
