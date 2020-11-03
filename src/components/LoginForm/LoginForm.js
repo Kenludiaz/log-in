@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Inputs from './Inputs';
 import ContinueAsGuestBtn from './ContinueAsGuestBtn';
+import {UserContext } from '../Contexts/UserContext';
 
 function LoginForm(props) {
-    if (props.isLoggedIn) {
+    const [loggedIn, toggleLogIn] = useContext(UserContext);
+    if (loggedIn) {
         return(
             <div className="container">
                 You are now logged in.    
@@ -14,7 +16,7 @@ function LoginForm(props) {
         <div className="container">
             <Inputs />
             <div className="container__div">--OR--</div>
-            <ContinueAsGuestBtn onLoginChange= {() => props.onLoginChange()}/>
+            <ContinueAsGuestBtn onClick= { () => toggleLogIn() }/>
         </div>
 
     )

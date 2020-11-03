@@ -1,21 +1,17 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import LoginForm from './components/LoginForm/LoginForm';
 import Header from './components/Header/Header';
-import UserContext from './components/Contexts/UserContext';
+import {UserContext, UserProvider} from './components/Contexts/UserContext';
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
-
-  const handleLoginChange = () => {
-    setIsLoggedIn(isLoggedIn => !isLoggedIn);
-  }
+  const data = useContext(UserContext);
 
   return (
     <div className="App">
-      <UserContext.Provider value={{isLoggedIn, handleLoginChange}}>
+      <UserProvider value={data}>
         <Header />
-        <LoginForm isLoggedIn={isLoggedIn} onLoginChange={ () => handleLoginChange()}/>  
-      </UserContext.Provider>
+        <LoginForm />  
+      </UserProvider>
     </div>
   );
 }

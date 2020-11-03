@@ -1,5 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-const UserContext = React.createContext(false);
+export const UserContext = React.createContext();
 
-export default UserContext;
+export const UserProvider = (props) => {
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+    const handleLoginChange = () => {
+        setIsLoggedIn(isLoggedIn => !isLoggedIn);
+    }
+    return(
+        <UserContext.Provider value={[isLoggedIn, handleLoginChange]}>
+            {props.children}
+        </UserContext.Provider>
+    )
+}
+
+
