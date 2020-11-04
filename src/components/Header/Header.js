@@ -1,12 +1,17 @@
 import React from 'react';
 import LogInOutBtn from './LogInOutBtn';
+import styled from 'styled-components';
+
+const Navigation = styled.header`
+    display: flex;
+`
 
 function Header(props) {
 
     return (
-        <header className="header">
+        <Navigation className="header">
             <LogInOutBtn />
-        </header>
+        </Navigation>
     )
 }
 
